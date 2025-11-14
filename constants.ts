@@ -1,0 +1,126 @@
+import { Service, Project, Testimonial } from './types';
+
+export const SERVICES_DATA: Service[] = [
+  {
+    id: 'new-construction',
+    title: 'New Construction',
+    shortDescription: 'From groundbreaking to completion, we build high-quality residential and commercial structures from the ground up.',
+    longDescription: 'Our new construction service covers every aspect of building a new structure. We handle everything from site preparation and foundation work to framing, roofing, and interior finishing. We specialize in both residential homes and commercial buildings, ensuring each project is built to the highest standards of quality and safety, perfectly realizing our client\'s vision.',
+    imageUrl: 'https://picsum.photos/seed/construction/800/600',
+    benefits: ['Turnkey Project Delivery', 'Customizable Designs', 'Adherence to Building Codes', 'High-Quality Materials'],
+    process: [
+      { step: 1, title: 'Initial Consultation', description: 'Discussing your project requirements, budget, and timeline.' },
+      { step: 2, title: 'Site Preparation & Foundation', description: 'Preparing the land and laying a solid foundation for the structure.' },
+      { step: 3, title: 'Framing & Construction', description: 'Erecting the structural skeleton and building the exterior and interior walls.' },
+      { step: 4, title: 'Finishing & Handover', description: 'Completing all interior/exterior finishes and conducting a final walkthrough.' },
+    ],
+    projectSamples: ['https://picsum.photos/seed/sample-nc1/800/600', 'https://picsum.photos/seed/sample-nc2/800/600'],
+  },
+  {
+    id: 'renovation-remodeling',
+    title: 'Renovation & Remodeling',
+    shortDescription: 'Transforming and modernizing existing spaces to enhance functionality and aesthetic appeal.',
+    longDescription: 'Breathe new life into your property with our expert renovation and remodeling services. Whether it’s a commercial space or a residential home, we handle everything from minor updates to complete overhauls. Our focus is on preserving structural integrity while introducing modern aesthetics and functionality, ultimately enhancing the value and usability of your space.',
+    imageUrl: 'https://picsum.photos/seed/renovation/800/600',
+    benefits: ['Enhanced Property Value', 'Modernized Aesthetics & Functionality', 'Improved Energy Efficiency', 'Minimal Disruption to Occupants'],
+    process: [
+        { step: 1, title: 'Assessment & Design', description: 'Evaluating the existing structure and creating a new design based on your goals.' },
+        { step: 2, title: 'Material Selection', description: 'Helping you choose the perfect materials, fixtures, and finishes.' },
+        { step: 3, title: 'Construction & Installation', description: 'Carefully executing the renovation plan with skilled craftsmanship.' },
+        { step: 4, title: 'Final Touches', description: 'Applying final finishes like paint, flooring, and fixtures for a polished look.' },
+    ],
+    projectSamples: ['https://picsum.photos/seed/sample-reno1/800/600', 'https://picsum.photos/seed/sample-reno2/800/600'],
+  },
+  {
+    id: 'design-planning',
+    title: 'Design and Planning',
+    shortDescription: 'Innovative architectural and structural planning to bring your vision to life with precision and compliance.',
+    longDescription: 'Our Design & Planning phase is the cornerstone of every successful project. We merge innovative architectural concepts with rigorous structural engineering to create blueprints that are both inspiring and feasible. Our team collaborates closely with clients to ensure every detail aligns with their vision, budget, and local building codes.',
+    imageUrl: 'https://picsum.photos/seed/design/800/600',
+    benefits: ['Cohesive & Integrated Design', 'Cost-Effective Material Sourcing', 'Regulatory Compliance & Permitting', 'Future-Proof & Sustainable Concepts'],
+    process: [
+      { step: 1, title: 'Consultation & Briefing', description: 'Understanding your vision, requirements, and project goals.' },
+      { step: 2, title: 'Conceptual Design', description: 'Developing initial sketches, 3D models, and architectural concepts.' },
+      { step: 3, title: 'Detailed Planning', description: 'Finalizing blueprints, structural plans, and material specifications.' },
+      { step: 4, title: 'Permit Acquisition', description: 'Managing all necessary documentation and approvals from local authorities.' },
+    ],
+    projectSamples: ['https://www.bing.com/ck/a?!&&p=a04550d89c090e5a4d9a780b4c5818d53495f04006b37991cad612423f0f3e0eJmltdHM9MTc2MzA3ODQwMA&ptn=3&ver=2&hsh=4&fclid=34256317-085a-650f-3942-7094092d6423&u=a1L2ltYWdlcy9zZWFyY2g_cT1jb25zdHJ1Y3Rpb24rc2l0ZStpbWFnZXMmaWQ9OENERTE4NUZGNkZFRjNCN0NEMDQ3NkJBMDNBRUE2OURFOUYzN0QzMCZGT1JNPUlBQ0ZJUg', 'https://www.bing.com/ck/a?!&&p=d1705d66f5e4b9d9c8e7a812d7ff008e959f9fb2609ab6e57c5c40cd551eb6c9JmltdHM9MTc2MzA3ODQwMA&ptn=3&ver=2&hsh=4&fclid=34256317-085a-650f-3942-7094092d6423&u=a1L2ltYWdlcy9zZWFyY2g_cT1jb25zdHJ1Y3Rpb24rc2l0ZStpbWFnZXMmaWQ9ODYxMEJBRjZDNjlFMzk4NjAwODFGNzcwM0ZBNkNFMzdDMjk3NjRFNyZGT1JNPUlBQ0ZJUg'],
+  },
+  {
+    id: 'demolition-dismantling',
+    title: 'Demolition & Dismantling',
+    shortDescription: 'Safe, efficient, and environmentally responsible demolition and site clearing services.',
+    longDescription: 'We provide professional demolition and dismantling services for all types of structures. Safety is our top priority, and our team follows strict protocols to ensure a controlled and secure process. We also focus on responsible waste management, recycling materials whenever possible to minimize environmental impact, leaving your site clean and ready for the next phase.',
+    imageUrl: 'https://picsum.photos/seed/demolition/800/600',
+    benefits: ['Strict Safety Protocols', 'Efficient Site Clearing', 'Eco-Friendly Waste Management', 'Regulatory Compliance'],
+    process: [
+      { step: 1, title: 'Site Assessment', description: 'Conducting a thorough survey of the structure and surrounding area.' },
+      { step: 2, title: 'Permitting & Planning', description: 'Securing necessary permits and developing a detailed demolition plan.' },
+      { step: 3, title: 'Controlled Demolition', description: 'Systematically dismantling the structure using specialized equipment.' },
+      { step: 4, title: 'Debris Removal & Recycling', description: 'Clearing the site of all materials and processing them for recycling.' },
+    ],
+    projectSamples: ['https://www.bing.com/ck/a?!&&p=a04550d89c090e5a4d9a780b4c5818d53495f04006b37991cad612423f0f3e0eJmltdHM9MTc2MzA3ODQwMA&ptn=3&ver=2&hsh=4&fclid=34256317-085a-650f-3942-7094092d6423&u=a1L2ltYWdlcy9zZWFyY2g_cT1jb25zdHJ1Y3Rpb24rc2l0ZStpbWFnZXMmaWQ9OENERTE4NUZGNkZFRjNCN0NEMDQ3NkJBMDNBRUE2OURFOUYzN0QzMCZGT1JNPUlBQ0ZJUg', 'https://th.bing.com/th/id/OIP.hpCniWgSPFtnyN38pSqAPgHaEa?w=247&h=150&c=6&o=7&cb=ucfimg2&pid=1.7&rm=3&ucfimg=1'],
+  },
+  {
+    id: 'maintenance-services',
+    title: 'Maintenance Services',
+    shortDescription: 'Reliable and proactive maintenance to preserve the value and integrity of your property.',
+    longDescription: 'Our maintenance services are designed to keep your property in optimal condition. We offer customized maintenance plans that include routine inspections, preventative care, and prompt repairs. From structural checks to cosmetic touch-ups, our team ensures your investment remains safe, functional, and beautiful for years to come.',
+    imageUrl: 'https://th.bing.com/th/id/OIP.u2BrpLsC8gwQXCQGHk06agHaEO?w=266&h=180&c=7&r=0&o=7&cb=ucfimg2&pid=1.7&rm=3&ucfimg=1',
+    benefits: ['Prolonged Property Lifespan', 'Preventative Care & Repairs', 'Customized Maintenance Plans', 'Enhanced Safety & Security'],
+    process: [
+        { step: 1, title: 'Property Evaluation', description: 'Assessing your property to identify key maintenance needs.' },
+        { step: 2, title: 'Plan Development', description: 'Creating a tailored maintenance schedule that fits your budget.' },
+        { step: 3, title: 'Scheduled Service', description: 'Performing regular maintenance tasks as outlined in the plan.' },
+        { step: 4, title: 'Reporting & Recommendations', description: 'Providing detailed reports and advising on any necessary repairs.' },
+    ],
+    projectSamples: ['/WhatsApp%20Image%202025-11-14%20at%2023.16.08_5d74033d.jpg', 'https://picsum.photos/seed/sample-ms2/800/600'],
+  },
+  {
+    id: 'sustainable-construction',
+    title: 'Sustainable Construction',
+    shortDescription: 'Building environmentally friendly structures with a focus on energy efficiency and sustainable materials.',
+    longDescription: 'We are committed to building a greener future with our sustainable construction services. We integrate eco-friendly practices into every project, from using recycled and locally sourced materials to installing energy-efficient systems. Our goal is to create buildings that not only have a minimal environmental footprint but also provide healthier living and working spaces.',
+    imageUrl: 'https://picsum.photos/seed/sustainable/800/600',
+    benefits: ['Reduced Environmental Impact', 'Lower Energy & Utility Costs', 'Healthier Indoor Environments', 'Use of Eco-Friendly Materials'],
+     process: [
+        { step: 1, title: 'Green Design', description: 'Planning for energy efficiency, water conservation, and material sustainability.' },
+        { step: 2, title: 'Sustainable Sourcing', description: 'Procuring environmentally friendly and locally sourced materials.' },
+        { step: 3, title: 'Efficient Construction', description: 'Implementing waste reduction strategies and green building techniques.' },
+        { step: 4, title: 'System Integration', description: 'Installing renewable energy systems and high-efficiency utilities.' },
+    ],
+    projectSamples: ['https://picsum.photos/seed/sample-sc1/800/600', 'https://picsum.photos/seed/sample-sc2/800/600'],
+  },
+  {
+    id: 'inspection-quality-control',
+    title: 'Inspection & Quality Control',
+    shortDescription: 'Rigorous inspection and quality control services to ensure projects meet the highest standards.',
+    longDescription: 'Our inspection and quality control services provide peace of mind by ensuring that every aspect of your project adheres to the strictest quality and safety standards. Our certified inspectors monitor the construction process at every stage, from foundation to finishing, identifying potential issues before they become problems and guaranteeing a final product of superior quality.',
+    imageUrl: 'https://picsum.photos/seed/inspection/800/600',
+    benefits: ['Compliance with Standards', 'Early Issue Detection', 'Superior Final Product', 'Comprehensive Reporting'],
+     process: [
+        { step: 1, title: 'Plan Review', description: 'Ensuring designs and plans meet all codes and quality benchmarks.' },
+        { step: 2, title: 'On-Site Inspections', description: 'Conducting regular inspections at critical stages of construction.' },
+        { step: 3, title: 'Material Testing', description: 'Verifying that all materials used meet project specifications.' },
+        { step: 4, title: 'Final Walkthrough', description: 'Performing a comprehensive final inspection before project handover.' },
+    ],
+    projectSamples: ['https://picsum.photos/seed/sample-iqc1/800/600', 'https://picsum.photos/seed/sample-iqc2/800/600'],
+  },
+];
+
+export const PROJECTS_DATA: Project[] = [
+  { id: 1, title: 'Orion Towers', category: 'Commercial', imageUrl: 'https://picsum.photos/seed/project1/600/400', description: 'A state-of-the-art commercial complex featuring advanced, sustainable architecture.' },
+  { id: 2, title: 'The Lakeside Villa', category: 'Residential', imageUrl: 'https://picsum.photos/seed/project2/600/400', description: 'A luxury residential villa with panoramic views and bespoke interior design.' },
+  { id: 3, title: 'Downtown Plaza Renovation', category: 'Renovation', imageUrl: 'https://picsum.photos/seed/project3/600/400', description: 'Complete modernization of a historic downtown building into a mixed-use space.' },
+  { id: 4, title: 'Phoenix Industrial Park', category: 'Ongoing', imageUrl: 'https://picsum.photos/seed/project4/600/400', description: 'A large-scale industrial park development currently under construction.' },
+  { id: 5, title: 'Azure Apartments', category: 'Residential', imageUrl: 'https://picsum.photos/seed/project5/600/400', description: 'A modern residential apartment building focused on community and smart living.' },
+  { id: 6, title: 'Metropolis Corporate HQ', category: 'Commercial', imageUrl: 'https://picsum.photos/seed/project6/600/400', description: 'Construction of a new headquarters for a Fortune 500 company.' },
+  { id: 7, 'title': 'Heritage Lofts', 'category': 'Renovation', 'imageUrl': 'https://picsum.photos/seed/project7/600/400', description: 'Conversion of a vintage warehouse into stylish residential lofts.' },
+  { id: 8, 'title': 'Coastal Estates', 'category': 'Residential', 'imageUrl': 'https://picsum.photos/seed/project8/600/400', description: 'An exclusive gated community of custom-built homes by the sea.' },
+];
+
+export const TESTIMONIALS_DATA: Testimonial[] = [
+  { quote: 'Sinjoh Group International transformed our vision into a stunning reality. Their professionalism and attention to detail were second to none. We couldn’t be happier with our new corporate headquarters.', author: 'Johnathan Deo', company: 'CEO, Innovate Corp' },
+  { quote: 'The entire construction process was managed flawlessly. They delivered our project on time and within budget, with exceptional quality. A truly trustworthy and innovative partner.', author: 'Maria Garcia', company: 'Director, Quantum Holdings' },
+  { quote: 'From design to completion, the team was communicative, transparent, and dedicated. The craftsmanship is evident in every corner of our new home. Highly recommended!', author: 'David Chen', company: 'Private Homeowner' },
+];

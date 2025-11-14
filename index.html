@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-g" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sinjoh Group International</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'sgi-dark-gray': '#353535',
+              'sgi-green-blue': '#3C6E71',
+              'sgi-white': '#FFFFFF',
+              'sgi-light-gray': '#D9D9D9',
+              'sgi-deep-blue': '#284B63',
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            keyframes: {
+              'fade-in-down': {
+                '0%': { opacity: '0', transform: 'translateY(-20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              'fade-in-up': {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              'page-enter': {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+               'modal-fade-in': {
+                '0%': { 'background-color': 'rgba(0,0,0,0)' },
+                '100%': { 'background-color': 'rgba(0,0,0,0.8)' },
+              },
+              'modal-scale-up': {
+                '0%': { opacity: '0', transform: 'scale(0.95)' },
+                '100%': { opacity: '1', transform: 'scale(1)' },
+              },
+            },
+            animation: {
+              'fade-in-down': 'fade-in-down 0.6s ease-out forwards',
+              'fade-in-up': 'fade-in-up 0.6s ease-out forwards',
+              'page-enter': 'page-enter 0.5s ease-out forwards',
+              'modal-fade-in': 'modal-fade-in 0.3s ease-out forwards',
+              'modal-scale-up': 'modal-scale-up 0.3s ease-out forwards',
+            },
+          },
+        },
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.6"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-sgi-white text-sgi-dark-gray">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

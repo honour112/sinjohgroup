@@ -3,21 +3,46 @@ import { Link } from 'react-router-dom';
 import { SERVICES_DATA, PROJECTS_DATA, TESTIMONIALS_DATA } from '../constants';
 import AnimatedSection from '../components/AnimatedSection';
 
+// List of all public images
+const PUBLIC_IMAGES = [
+  '/WhatsApp%20Image%202025-11-14%20at%2023.16.08_5d74033d.jpg',
+  '/WhatsApp%20Image%202025-11-14%20at%2023.16.08_6a5387c3.jpg',
+  '/WhatsApp%20Image%202025-11-14%20at%2023.16.09_bd746147.jpg',
+  '/WhatsApp%20Image%202025-11-15%20at%2008.19.44_8f5c7c9f.jpg',
+  '/WhatsApp%20Image%202025-11-15%20at%2008.19.44_c151053e.jpg',
+  '/WhatsApp%20Image%202025-11-15%20at%2008.19.45_2dfafa9d.jpg',
+  '/WhatsApp%20Image%202025-11-15%20at%2008.19.46_0476b280.jpg',
+  '/WhatsApp%20Image%202025-11-15%20at%2008.19.46_0e53f2c0.jpg',
+  '/WhatsApp%20Image%202025-11-15%20at%2008.19.47_ce106901.jpg',
+  '/WhatsApp%20Image%202025-11-15%20at%2008.19.48_2a7a0c45.jpg',
+  '/WhatsApp%20Image%202025-11-15%20at%2008.19.48_44f1f64d.jpg',
+  '/WhatsApp%20Image%202025-11-15%20at%2008.19.48_45bbb0c1.jpg',
+  '/WhatsApp%20Image%202025-11-15%20at%2008.19.48_b01c778c.jpg',
+  '/WhatsApp%20Image%202025-11-15%20at%2008.19.49_00b76994.jpg',
+  '/WhatsApp%20Image%202025-11-15%20at%2008.19.49_66912ab6.jpg',
+  '/WhatsApp%20Image%202025-11-15%20at%2008.19.49_9d72261e.jpg',
+  '/WhatsApp%20Image%202025-11-15%20at%2008.19.50_038a290c.jpg',
+  '/WhatsApp%20Image%202025-11-15%20at%2008.19.50_fcaf340d.jpg',
+];
+
+// Helper function to get a random image
+const getRandomImage = (seed?: number) => {
+  const index = seed !== undefined ? seed % PUBLIC_IMAGES.length : Math.floor(Math.random() * PUBLIC_IMAGES.length);
+  return PUBLIC_IMAGES[index];
+};
+
 const Home: React.FC = () => {
   const featuredServices = SERVICES_DATA.slice(0, 3);
   const featuredProjects = PROJECTS_DATA.slice(0, 4);
   const [currentTestimonial, setCurrentTestimonial] = React.useState(0);
   const [currentHeroImage, setCurrentHeroImage] = React.useState(0);
-
-  // Note: assets in `public/` are served at the site root ("/").
-  // Don't include the `public/` directory in the URL — reference the file from root
-  // (eg. `/image.jpg`). Also avoid spaces in filenames (rename to hyphens) or
-  // URL-encode paths. For now we'll encode the existing filename.
-  const heroImages = [
-    'https://th.bing.com/th/id/OIP.xlzd0JsPXGXYJwTEbx_KHgHaE8?w=276&h=184&c=7&r=0&o=7&cb=ucfimg2&pid=1.7&rm=3&ucfimg=1',
-    'https://th.bing.com/th/id/OIP.sryP3RwNAQixrL8XZUb3zwHaEJ?w=281&h=180&c=7&r=0&o=7&cb=ucfimg2&pid=1.7&rm=3&ucfimg=1',
-    '/WhatsApp%20Image%202025-11-14%20at%2023.16.08_5d74033d.jpg',
-  ];
+  
+  // Initialize hero images once on mount
+  const [heroImages] = React.useState(() => [
+    getRandomImage(6),
+    getRandomImage(7),
+    getRandomImage(4),
+  ]);
 
   React.useEffect(() => {
     const testimonialTimer = setInterval(() => {
@@ -43,8 +68,7 @@ const Home: React.FC = () => {
             key={index}
             className="absolute inset-0 w-full h-full bg-cover bg-center transition-opacity duration-1000"
             style={{ 
-              // URL-encode the path in case the filename contains spaces.
-              backgroundImage: `url(${encodeURI(img)})`,
+              backgroundImage: `url('${img}')`,
               opacity: index === currentHeroImage ? 1 : 0,
             }}
           />
@@ -83,7 +107,7 @@ const Home: React.FC = () => {
             </Link>
           </div>
           <div>
-            <img src="https://picsum.photos/seed/about-home/800/600" alt="Construction Site" className="rounded-lg shadow-xl" loading="lazy" />
+            <img src={getRandomImage(3)} alt="Construction Site" className="rounded-lg shadow-xl" loading="lazy" />
           </div>
         </div>
       </AnimatedSection>

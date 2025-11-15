@@ -48,6 +48,8 @@ const Header: React.FC = () => {
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-sgi-deep-blue/95 shadow-lg backdrop-blur-sm' : 'bg-sgi-deep-blue/90'}`}>
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse" onClick={closeMenu}>
+         <img src="/WhatsApp Image 2025-11-15 at 09.35.19_6d7251cf.jpg" alt="sinjohLogo" className="inline-block h-10 w-10 ml-2 rounded-full" />
+
           <span className="self-center text-2xl font-semibold whitespace-nowrap text-sgi-white">Sinjoh Group</span>
         </Link>
         <button
